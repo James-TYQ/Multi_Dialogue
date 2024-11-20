@@ -1,0 +1,648 @@
+analyzing_general:
+  scenario: |-
+    The scenario of these two dialogue are general analyzing. Analyzing general is a type of dialogue focused on examining, interpreting, and understanding various subjects or data in a broad and non-specific manner. This type of conversation aims to provide a general analysis, offering insights, explanations, and overviews without delving deeply into specialized or highly technical details. The goal is to help users gain a clearer understanding of a topic through thoughtful examination and discussion.
+  attributes_num: 20
+  attributes: |-
+    - Accuracy: The response provides correct and precise information, ensuring that facts and figures are reliable and well-supported.
+    - Admit Uncertainty: The response acknowledges areas of ambiguity or limited knowledge, transparently communicating when information is not fully certain.
+    - Audience Friendly: The response is accessible and easy to understand, considering the user''s background and level of expertise.
+    - Authenticity: The response appears genuine and credible, reflecting a realistic and trustworthy analysis.
+    - Citation: The response references credible sources and evidence to support its claims, enhancing the reliability of the information provided.
+    - Clarity: The response is clear and straightforward, avoiding unnecessary jargon and ensuring that explanations are easily comprehensible.
+    - Coverage: The response addresses all relevant aspects of the topic, providing a comprehensive overview without significant omissions.
+    - Creativity: The response demonstrates original thinking and innovative approaches to the analysis, offering unique perspectives.
+    - Depth: The response provides a thorough understanding of the topic, exploring underlying factors and implications without being superficial.
+    - Feasibility: The response offers practical and realistic insights, ensuring that the analysis is applicable and actionable.
+    - Harmlessness: The response is considerate and respectful, avoiding any content that could be harmful or offensive.
+    - Information Richness: The response is dense with valuable information, offering a wealth of knowledge and insights on the topic.
+    - Insight: The response provides deep and meaningful understanding, revealing important connections and implications.
+    - Logic: The response follows a coherent and rational structure, with well-reasoned arguments and sound conclusions.
+    - Multiple Aspects: The response examines the topic from various angles, considering different perspectives and dimensions.
+    - Objectivity: The response maintains an unbiased and impartial stance, presenting information and analysis without personal or subjective influence.
+    - Originality: The response offers fresh and unique viewpoints, contributing new ideas to the discussion.
+    - Professionalism: The response reflects a high level of expertise and competence, adhering to standards of professional analysis.
+    - Relevance: The response remains focused on the topic at hand, ensuring that all information and insights are pertinent to the discussion.
+    - Timeliness: The response provides up-to-date information and analysis, reflecting the current state of knowledge and recent developments.
+brainstorming:
+  scenario: |-
+    The scenario of these two dialogue are brainstorming. Brainstorming is a collaborative and creative process where participants generate a wide range of ideas and solutions to a particular problem or challenge. It emphasizes open-mindedness, rapid idea generation, and the suspension of criticism to encourage free-flowing and innovative thinking. The goal is to explore as many ideas as possible, regardless of their feasibility, to later refine and develop the most promising ones.
+  attributes_num: 20
+  attributes: |-
+    - Admit Uncertainty: The response acknowledges areas of ambiguity or lack of knowledge, promoting an open and explorative mindset.
+    - Attractive: The response is engaging and stimulating, capturing participants'' interest and motivating them to contribute ideas.
+    - Audience Friendly: The response is inclusive and considerate of participants'' perspectives, fostering a collaborative and supportive environment.
+    - Authenticity: The response feels genuine and sincere, encouraging honest and uninhibited idea sharing.
+    - Clarity: The response is clear and easy to understand, ensuring that ideas are communicated effectively without confusion.
+    - Coverage: The response addresses a wide range of aspects related to the topic, ensuring comprehensive exploration.
+    - Creativity: The response demonstrates innovative and original thinking, contributing unique and imaginative ideas.
+    - Depth: The response explores ideas in detail, providing thorough and insightful contributions.
+    - Feasibility: The response includes practical and actionable ideas that can be realistically implemented.
+    - Harmlessness: The response is respectful and non-offensive, creating a safe space for idea sharing.
+    - Information Richness: The response provides valuable and detailed information, enriching the brainstorming session.
+    - Insight: The response offers deep understanding and perceptive observations, enhancing the quality of ideas.
+    - Interactivity: The response encourages active participation and collaboration, fostering dynamic and engaging exchanges.
+    - Logic: The response follows a logical structure, with coherent reasoning and sound arguments supporting ideas.
+    - Multiple Aspects: The response considers various perspectives and dimensions of the topic, ensuring a well-rounded discussion.
+    - Objectivity: The response maintains impartiality and fairness, evaluating ideas based on merit rather than bias.
+    - Originality: The response introduces novel and distinctive ideas, contributing to the uniqueness of the brainstorming session.
+    - Professional: The response reflects a high level of expertise and competence, providing credible and authoritative input.
+    - Relevance: The response is directly related to the topic and objectives of the brainstorming session.
+    - Timeliness: The response provides up-to-date information and insights, reflecting the current context and relevance of ideas.
+chitchat:
+  scenario: |-
+    The scenario of these two dialogue are chitchat. Chitchat is casual, informal conversation focused on social interaction rather than exchanging detailed information or solving problems. It aims to build rapport, entertain, and engage participants in a light-hearted and friendly manner.
+  attributes_num: 14
+  attributes: |-
+    - Attractive: The response is engaging and able to capture the user's interest, making the conversation enjoyable and lively.
+    - Audience Friendly: The response is considerate of the user's needs and feelings, fostering a positive and inclusive interaction.
+    - Being Friendly: The character displays a friendly attitude and tone, making the user feel welcomed and comfortable.
+    - Coherence: The response flows naturally and logically, with responses that smoothly connect to previous and following statements.
+    - Creativity: The character demonstrates unique and imaginative thinking, contributing original and interesting topics to the conversation.
+    - Emojis: Emojis are appropriately used to enhance the expression, adding emotional color and fun without being excessive or inappropriate.
+    - Emotion: The character expresses genuine and strong emotions, making the conversation more relatable and engaging.
+    - Harmlessness: The response ensures that no content is harmful or offensive, maintaining a safe and respectful environment.
+    - Interactivity: The response promotes active participation and engagement, encouraging the user to contribute to the conversation.
+    - Length: The responses are of appropriate length, providing sufficient detail without being overly long or too brief.
+    - Logic: The response follows a logical sequence, with coherent explanations and sound reasoning.
+    - Relevance: The responses are directly relevant to the user's statements and the overall topic of the conversation.
+    - Style: The character maintains a consistent and appropriate style, whether formal or informal, as suited to the user's chitchat context.
+    - Vivid: The response is vivid and lively, using concrete and imaginative language to make the conversation more visually and emotionally engaging.
+code_writing:
+  scenario: |-
+    The scenario of these two dialogue are code writing. These responses are in the context of code writing. Code writing involves creating, editing, and debugging code to solve problems, implement features, or automate tasks. The primary focus is on the clarity, correctness, and efficiency of the code, as well as the explanation and understanding of the coding process.
+  attributes_num: 13
+  attributes: |-
+    - Accuracy: The responses should provide precise and correct information, ensuring that the code and explanations are free from errors.
+    - Step by Step Explanation: The response should break down complex coding tasks into clear, manageable steps, making it easier for the user to follow and understand the process.
+    - Clarity: The responses should be clear and easy to understand, avoiding ambiguity and ensuring that the user can easily grasp the concepts and instructions.
+    - Code Correctness: The provided code should be syntactically and logically correct, functioning as intended without errors.
+    - Code Readability: The code should be well-structured, with appropriate use of indentation, comments, and naming conventions to make it easy to read and understand.
+    - Feasibility: The solutions and code provided should be practical and executable in the given context, considering the constraints and requirements of the task.
+    - Harmlessness: The responses should ensure that the code and instructions do not cause harm, such as introducing security vulnerabilities or causing unintended side effects.
+    - Instruction Following: The responses should accurately follow the user''s instructions and requirements, addressing the specific needs and constraints provided.
+    - Layout: The code and explanations should be well-organized, with a logical flow and clear separation of different sections or steps.
+    - Logic: The responses should demonstrate sound reasoning and logical consistency, ensuring that the code and explanations make sense and achieve the desired outcomes.
+    - Modularity: The code should be modular, with functions and components that are reusable and maintainable, promoting good software engineering practices.
+    - Professional: The responses should reflect a high level of professionalism, with attention to detail, accuracy, and adherence to best practices in coding and software development.
+    - Style: The response should maintain a consistent and appropriate style, whether formal or informal, as suited to the user''s context and preferences.
+creative_writing:
+  scenario: |-
+    The scenario of these two dialogue are creative writing. Creative writing is the art of crafting stories, poetry, and other literary works that emphasize imaginative and original expression. It involves creating characters, plots, settings, and response that evoke emotions, provoke thought, and captivate the audience. The primary aim is to entertain, inspire, and sometimes challenge readers through innovative and engaging narrative techniques.
+  attributes_num: 18
+  attributes: |-
+    - Attractive: The response is captivating and holds the reader's attention, making the story engaging and compelling.
+    - Audience Friendly: The response is accessible and considerate of the reader's perspective, ensuring the story is enjoyable and relatable. 
+    - Being Friendly: The tone is warm and inviting, creating a welcoming atmosphere for the reader. 
+    - Coherence: The response is logically structured and flows seamlessly, contributing to a cohesive narrative. 
+    - Creativity: The response showcases originality and imaginative ideas, bringing fresh perspectives and inventive scenarios to the story. 
+    - Depth: The response adds layers of meaning and complexity, enriching the story with nuanced characters and themes. 
+    - Emotion: The response conveys strong and genuine emotions, resonating with the reader and enhancing the emotional impact of the story. 
+    - Harmlessness: The response avoids harmful or offensive content, ensuring a respectful and safe reading experience. 
+    - Information Richness: The response provides insightful details that enhance the reader's understanding of the story's world and characters. 
+    - Insight: The response offers deep and thought-provoking reflections, adding intellectual depth to the narrative. 
+    - Instruction Following: The response adheres to the given instructions or prompts, ensuring it aligns with the intended direction of the story. 
+    - Logic: The response maintains a logical progression, ensuring that character actions and plot developments are reasonable and believable. 
+    - Multiple Aspects: The response explores various facets of the story, including different perspectives, emotions, and themes. 
+    - Originality: The response features unique and distinctive elements that set the story apart from others. 
+    - Pacing: The response maintains a rhythm that keeps the story moving at an appropriate speed, balancing action and reflection. 
+    - Relevance: The response is pertinent to the plot and character development, contributing meaningfully to the story'\ s progression. 
+    - Style: The response reflects a consistent and appropriate writing style, whether formal, informal, poetic, or conversational, as suited to the story. 
+    - Vivid: The response uses descriptive and evocative language, creating vivid imagery and bringing the story to life for the reader.
+data_analysis:
+  scenario: |-
+    The scenario of these two dialogue are data analysis. Data analysis refers to the process of inspecting, cleansing, transforming, and modeling data with the goal of discovering useful information, drawing conclusions, and supporting decision-making.
+  attributes_num: 14
+  attributes: |-
+    - Attractive: The response is engaging, capturing the user's interest in data analysis concepts and processes.
+    - Audience Friendly: The response is considerate of the user's level of understanding and needs, making complex data analysis concepts accessible.
+    - Being Friendly: The character displays a supportive and approachable attitude, making the user feel comfortable discussing data analysis topics.
+    - Coherence: The response flows logically and naturally, with responses that connect smoothly to previous and following statements.
+    - Creativity: The character provides unique and innovative explanations or examples related to data analysis, enhancing understanding.
+    - Emojis: Emojis are used appropriately to clarify or emphasize points in the data analysis discussion, without being distracting.
+    - Emotion: The character expresses genuine interest and enthusiasm for data analysis, making the conversation more engaging.
+    - Harmlessness: The response avoids any harmful or offensive content, ensuring a respectful and safe discussion about data analysis.
+    - Interactivity: The response encourages active participation and engagement, prompting the user to ask questions or provide input on data analysis topics.
+    - Length: The responses are of appropriate length, providing detailed explanations without being overly verbose or too brief.
+    - Logic: The response follows a logical sequence, with coherent explanations and sound reasoning related to data analysis.
+    - Relevance: The responses are directly relevant to the user's questions and the overall topic of data analysis.
+    - Style: The character maintains a consistent and appropriate style, whether formal or informal, suited to the user''s data analysis context.
+    - Vivid: The response is vivid and lively, using concrete and imaginative language to make data analysis concepts more understandable and engaging.
+explaining_general:
+  scenario: |-
+    The scenario of these two dialogue are general explaining. Explaining_general is the act of providing clear, detailed, and understandable explanations on a wide range of topics, aiming to inform, clarify, and educate the audience effectively.
+  attributes_num: 17
+  attributes: |-
+    - Accuracy: The explanation must be factually correct and free of errors.
+    - Admit Uncertainty: The explanation should acknowledge any uncertainties or limitations in the information provided.
+    - Step by Step Explanation: The explanation should break down complex concepts into manageable, sequential steps.
+    - Audience Friendly: The explanation should be easy for the audience to understand, avoiding jargon and overly technical language.
+    - Authenticity: The explanation should be genuine and based on reliable sources or established knowledge.
+    - Citation: The explanation should include references to credible sources when applicable.
+    - Clarity: The explanation should be straightforward and easy to follow.
+    Coherence: The explanation should be logically structured and flow smoothly from one point to the next.
+    - Coverage: The explanation should address all relevant aspects of the topic comprehensively.
+    - Depth: The explanation should provide sufficient detail to give a thorough understanding of the topic.
+    - Harmlessness: The explanation should avoid any content that could be harmful or offensive.
+    - Instruction Following: The explanation should adhere to the user''s specific instructions or questions.
+    - Logic: The explanation should follow a clear and rational line of reasoning.
+    - Multiple Aspects: The explanation should consider and address various facets of the topic.
+    - Objectivity: The explanation should be unbiased and based on factual information.
+    - Professionalism: The explanation should be presented in a professional manner, reflecting expertise on the topic.
+    - Relevance: The explanation should be directly pertinent to the user''s inquiry or the topic at hand.
+functional_writing:
+  scenario: |-
+    The scenario of these two dialogue are functional writing. Functional writing in a response context refers to the exchange of information or instructions in a clear, precise, and efficient manner to achieve a specific purpose. This type of writing is often characterized by its focus on clarity, accuracy, and utility, aiming to facilitate understanding, decision-making, or action. Functional Writing might include technical explanations, procedural instructions, formal communication, or any other type of writing where the primary goal is to convey information effectively.
+  attributes_num: 19
+  attributes: |-
+    - Accuracy: The information provided is correct and free from errors.
+    - Authenticity: The response reflects genuine and credible communication, often backed by factual data or real-world examples.
+    - Citation: Proper references and sources are included to support the information presented.
+    - Clarity: The language is clear and easy to understand, avoiding ambiguity and confusion.
+    - Coherence: The response flows logically and consistently, with each part connecting smoothly to the next.
+    - Completeness: All necessary information is provided, leaving no gaps or unanswered questions.
+    - Coverage: The response addresses all relevant aspects of the topic, ensuring comprehensive communication.
+    - Creativity: The writing demonstrates originality in presenting information, though it remains focused on the functional purpose.
+    - Depth: The response provides thorough and detailed explanations, going beyond surface-level information.
+    - Faithfulness: The content stays true to the original context or instructions, without misrepresentation.
+    - Harmlessness: The response avoids any content that could be harmful, offensive, or misleading.
+    - Insight: The writing offers valuable perspectives or understanding, enhancing the reader''s comprehension of the topic.
+    - Instruction Following: The response adheres to the given instructions or guidelines, ensuring relevance and appropriateness.
+    - Layout: The information is organized in a clear and logical manner, making it easy to follow and understand.
+    - Length: The responses are of appropriate length, providing sufficient detail without being overly verbose or too brief.
+    - Logic: The response is logically structured, with sound reasoning and clear connections between points.
+    - Professionalism: The writing maintains a formal and respectful tone, appropriate for the context and audience.
+    - Relevance: The responses are directly related to the topic or question, avoiding unnecessary digressions.
+    - Style: The writing style is consistent and suitable for the functional purpose, whether formal, technical, or instructional.
+safe_experimental_practices:
+  scenario: |-
+    The scenario of these two dialogue are inquiring about safe experimental practices. Inquiring about safe experimental practices involves seeking information, guidelines, and advice on how to conduct scientific or technical experiments in a manner that ensures the safety of all participants, minimizes risks, and adheres to established standards and regulations. This type of response aims to provide accurate, reliable, and practical information to help users understand and implement safety measures effectively.
+  attributes_num: 12
+  attributes: |-
+    - Accuracy: The information provided must be factually correct and based on established scientific principles and safety standards.
+    - Authenticity: The advice and guidelines should be genuine and reflect real-world practices and regulations.
+    - Citation: Relevant sources, such as scientific literature, regulatory guidelines, or expert opinions, should be cited to support the information provided.
+    - Clarity: The advice should be communicated in a clear and understandable manner, avoiding technical jargon unless it is explained.
+    - Completeness: The response should cover all necessary aspects of safe experimental practices, including preparation, execution, and post-experiment procedures.
+    - Coverage: The response should address a wide range of safety considerations, including but not limited to chemical, biological, physical, and environmental hazards.
+    - Feasibility: The recommended practices should be practical and achievable within the constraints of typical experimental settings.
+    - Harmlessness: The information should ensure that no harmful or dangerous advice is given, prioritizing the well-being of individuals and the environment.
+    - Logic: The advice should follow a logical sequence, with clear reasoning and rationale behind each recommendation.
+    - Objectivity: The information should be unbiased and based on objective evidence rather than personal opinions or anecdotal experiences.
+    - Professionalism: The tone and content should reflect a high level of expertise and professionalism, suitable for a scientific or technical audience.
+    - Relevance: The advice should be directly relevant to the specific type of experiment or safety concern being inquired about.
+instructional_rewriting:
+  scenario: |-
+    The scenario of these two dialogue are instructional rewriting. Instructional Rewriting: Instructional rewriting involves modifying or enhancing a given text or response to improve its clarity, accuracy, coherence, or other attributes while faithfully adhering to the original instructions or intent. The goal is to create a revised version that better serves the instructional purpose, such as making the information more understandable, correcting errors, or adapting the style to suit a specific audience.
+  attributes_num: 14
+  attributes: |-
+    - Accuracy: The revised text should correct any factual inaccuracies present in the original and ensure all information is precise and correct.
+    - Authenticity: The revision should maintain the original tone and voice, preserving the genuine intent and style of the original content.
+    - Clarity: The rewritten text should be clear and easy to understand, avoiding ambiguity and confusion.
+    - Coherence: The revised content should flow logically and smoothly, with ideas and sentences well-connected and easy to follow.
+    - Completeness: The revision should cover all necessary points and information, ensuring nothing essential is omitted.
+    - Creativity: The revised text should demonstrate originality and creativity in improving the content, making it more engaging and effective.
+    - Faithfulness: The revision should stay true to the original text''s meaning and purpose, without introducing significant deviations.
+    - Harmlessness: The revised content should not contain harmful or offensive material, ensuring it is safe and respectful for all audiences.
+    - Instruction Following: The revised text should adhere strictly to the given instructions, fulfilling the specific requirements and guidelines provided.
+    - Length: The revised content should be of appropriate length, providing sufficient detail without being overly verbose or too brief.
+    - Logic: The revision should follow a logical structure, with coherent arguments and sound reasoning.
+    - Pointing Out: The revised text should clearly indicate the parts that have been modified or improved, making it easy to identify changes.
+    - Relevance: The revised content should be directly relevant to the topic and purpose, avoiding unnecessary digressions or irrelevant information.
+    - Style: The revision should maintain a consistent and appropriate style, suited to the intended audience and context of the original content.
+literary_appreciation:
+  scenario: |-
+    The scenario of these two dialogue are literary appreciation. Literary appreciation is the analysis and evaluation of literary works, focusing on their artistic qualities, themes, and stylistic elements. It involves a deep understanding of the text, including its historical context, author's intent, and the emotional and intellectual responses it evokes in readers. The goal is to appreciate the complexity and beauty of the literature and to gain insights into the human experience through the text.
+  attributes_num: 15
+  attributes: |-
+    - Attractive: The dialogue captivates the user's interest by highlighting the beauty and intricacies of the literary work, making the conversation engaging and enjoyable. 
+    - Being Friendly: The dialogue maintains a warm and approachable tone, making the user feel comfortable and valued during the discussion. 
+    - Coherence: The dialogue is logically structured, with each response building on the previous ones to create a seamless and understandable analysis of the literary work. 
+    - Coverage: The dialogue thoroughly addresses various aspects of the literary work, including themes, characters, style, and historical context, providing a comprehensive appreciation. 
+    - Creativity: The dialogue offers unique and imaginative interpretations of the literary work, showcasing original thoughts and perspectives that enrich the user's understanding. 
+    - Depth: The dialogue delves deeply into the literary work, exploring complex themes and nuanced details that reveal the text's richness and layers of meaning. 
+    - Harmlessness: The dialogue ensures that all content is respectful and considerate, avoiding any potentially harmful or offensive remarks. 
+    - Insight: The dialogue provides profound and perceptive observations about the literary work, offering the user valuable and thought-provoking insights. 
+    - Logic: The dialogue follows a clear and rational progression of ideas, with well-supported arguments and explanations that make sense within the context of the literary analysis. 
+    - Multiple Aspects: The dialogue examines the literary work from various angles, including thematic, stylistic, and contextual perspectives, to provide a well-rounded appreciation. 
+    - Originality: The dialogue presents fresh and innovative interpretations, avoiding clichés and commonplaces to offer a distinctive and personal view of the literary work. 
+    - Professional: The dialogue demonstrates a high level of expertise and knowledge about literature, using appropriate terminology and references to support the analysis. 
+    - Relevance: The dialogue stays focused on the literary work and its analysis, ensuring that all responses are pertinent to the discussion at hand. 
+    - Style: The dialogue maintains a consistent and appropriate style, whether formal or informal, that suits the context of literary appreciation and the user's preferences. 
+    - Vivid: The dialogue uses expressive and evocative language to bring the literary work to life, making the analysis more engaging and memorable for the user.
+math_reasoning:
+  scenario: |-
+    The scenario of these two dialogue are math reasoning. Math reasoning involves logical and systematic thinking to solve mathematical problems. It requires understanding mathematical concepts, applying appropriate methods, and providing clear, step-by-step explanations to arrive at accurate solutions. The goal is to help the user understand the process and reasoning behind solving mathematical problems.
+  attributes_num: 14
+  attributes: |-
+    - Accuracy: The dialogue provides correct and precise mathematical solutions without errors.
+    - Step by Step Explanation: The dialogue breaks down the problem into clear, logical steps, explaining each part of the solution process.
+    - Authenticity: The dialogue reflects genuine mathematical reasoning and adheres to standard mathematical principles and methods.
+    - Clarity: The explanations are clear and easy to understand, avoiding unnecessary jargon or complexity.
+    - Completeness: The dialogue addresses all parts of the problem and provides a thorough solution without leaving any steps out.
+    - Instruction Following: The dialogue accurately follows the user''s instructions and addresses the specific problem or question posed.
+    - Layout: The solution is presented in a well-organized manner, making it easy to follow and understand.
+    - Logic: The reasoning and steps taken to solve the problem are logically sound and coherent.
+    - Modularity: The dialogue breaks down the solution into manageable, modular parts that can be easily understood individually.
+    - Objectivity: The dialogue remains neutral and objective, focusing solely on providing a correct and logical solution.
+    - Pointing Out: The dialogue identifies and corrects any mistakes or misunderstandings in the problem-solving process.
+    - Professional: The dialogue demonstrates a high level of expertise and professionalism in mathematical reasoning.
+    - Relevance: The solutions and explanations are directly relevant to the problem and do not include extraneous information.
+    - Result at the Beginning: The final result or answer is provided at the beginning of the explanation, followed by the detailed steps leading to that result.
+solving_exam_question_with_math:
+  scenario: |-
+    The scenario of these two dialogue are math reasoning. Math reasoning involves logical and systematic thinking to solve mathematical problems. It requires understanding mathematical concepts, applying appropriate methods, and providing clear, step-by-step explanations to arrive at accurate solutions. The goal is to help the user understand the process and reasoning behind solving mathematical problems.
+  attributes_num: 14
+  attributes: |-
+    - Accuracy: The dialogue provides correct and precise mathematical solutions without errors.
+    - Step by Step Explanation: The dialogue breaks down the problem into clear, logical steps, explaining each part of the solution process.
+    - Authenticity: The dialogue reflects genuine mathematical reasoning and adheres to standard mathematical principles and methods.
+    - Clarity: The explanations are clear and easy to understand, avoiding unnecessary jargon or complexity.
+    - Completeness: The dialogue addresses all parts of the problem and provides a thorough solution without leaving any steps out.
+    - Instruction Following: The dialogue accurately follows the user''s instructions and addresses the specific problem or question posed.
+    - Layout: The solution is presented in a well-organized manner, making it easy to follow and understand.
+    - Logic: The reasoning and steps taken to solve the problem are logically sound and coherent.
+    - Modularity: The dialogue breaks down the solution into manageable, modular parts that can be easily understood individually.
+    - Objectivity: The dialogue remains neutral and objective, focusing solely on providing a correct and logical solution.
+    - Pointing Out: The dialogue identifies and corrects any mistakes or misunderstandings in the problem-solving process.
+    - Professional: The dialogue demonstrates a high level of expertise and professionalism in mathematical reasoning.
+    - Relevance: The solutions and explanations are directly relevant to the problem and do not include extraneous information.
+    - Result at the Beginning: The final result or answer is provided at the beginning of the explanation, followed by the detailed steps leading to that result.
+open_question:
+  scenario: "The scenario of these two dialogue are open question. Open question dialogue involves queries that cannot be answered with a simple \"yes\" or \"no.\" These questions require more detailed, thoughtful responses and encourage deeper discussion. The purpose is to explore topics in a comprehensive manner, allowing for a wide range of perspectives and insights. Open questions often begin with \"how,\" \"why,\" or \"what,\" and are designed to stimulate critical thinking and elaborate answers."
+  attributes_num: 15
+  attributes: |-
+    - Admit Uncertainty: The dialogue acknowledges areas of ambiguity or lack of complete knowledge, demonstrating intellectual honesty and openness to further inquiry. 
+    - Audience Friendly: The responses are considerate of the user's perspective and designed to be easily understandable, fostering a positive and inclusive interaction. 
+    - Being Friendly: The tone of the dialogue is warm and approachable, making the user feel comfortable and respected. 
+    - Clarity: The responses are clear and concise, avoiding unnecessary jargon and ensuring that the information is easily comprehensible. 
+    - Coherence: The dialogue maintains a logical flow, with each response building on previous statements and leading to a cohesive discussion. 
+    - Creativity: The dialogue includes unique and imaginative elements, offering original thoughts and perspectives that enrich the conversation. 
+    - Depth: The responses provide thorough and detailed information, exploring the topic in a meaningful and comprehensive manner. 
+    - Harmlessness: The dialogue avoids any content that could be harmful or offensive, ensuring a respectful and safe interaction. 
+    - Information Richness: The responses are packed with valuable and relevant information, contributing to a well-informed discussion. 
+    - Insight: The dialogue offers deep understanding and perceptive observations, providing meaningful and thought-provoking content. 
+    - Logic: The responses follow a logical structure, with well-reasoned arguments and clear connections between ideas. 
+    - Multiple Aspects: The dialogue explores various facets of a topic, presenting a balanced and multi-dimensional view. 
+    - Originality: The responses are characterized by fresh and innovative ideas, avoiding clich\xE9\ s and commonplaces. 
+    - Relevance: The responses are directly related to the user's questions and the overall topic, maintaining focus and pertinence. 
+    - Style: The dialogue maintains a consistent and appropriate style, whether formal or informal, in alignment with the nature of the discussion.
+planning:
+  scenario: |-
+    The scenario of these two dialogue are planning. Planning in dialogue refers to conversations where the primary goal is to organize, strategize, and prepare for future actions or events. This type of dialogue involves setting objectives, determining necessary steps, allocating resources, and scheduling activities to achieve a specific outcome. It requires clear communication, logical structuring, and often collaboration between participants to ensure that plans are feasible and effective.
+  attributes_num: 14
+  attributes: |-
+    - Accuracy: The information provided is precise and correct, ensuring that the plans are based on reliable and factual data.
+    - Audience Friendly: The dialogue is tailored to the user''s level of understanding and needs, making the planning process accessible and user-centric.
+    - Clarity: The conversation is clear and easy to understand, with well-defined steps and objectives, avoiding ambiguity or confusion.
+    - Completeness: The dialogue covers all necessary aspects of the planning process, ensuring that no critical elements are omitted.
+    - Creativity: The conversation introduces innovative and original ideas, offering creative solutions and approaches to planning challenges.
+    - Feasibility: The plans discussed are realistic and achievable, considering available resources, constraints, and potential obstacles.
+    - Harmlessness: The dialogue avoids any content that could be harmful or offensive, ensuring a respectful and safe planning environment.
+    - Instruction Following: The conversation adheres to the given instructions and guidelines, ensuring that the planning process aligns with the user''s requirements and goals.
+    - Interactivity: The dialogue encourages active participation from the user, promoting engagement and collaboration in the planning process.
+    - Logic: The planning steps and decisions follow a coherent and rational sequence, ensuring that the plans are well-structured and sound.
+    - Modularity: The conversation breaks down the planning process into manageable and distinct components, making it easier to understand and execute.
+    - Professionalism: The dialogue maintains a professional tone and approach, demonstrating expertise and reliability in planning matters.
+    - Relevance: The conversation stays focused on the planning topic, ensuring that all responses are pertinent and contribute to the planning objectives.
+    - Timeliness: The dialogue provides timely responses and considers the time-sensitive nature of planning, ensuring that plans are developed and communicated promptly.
+question_generation:
+  scenario: |-
+    The scenario of these two dialogue are question generation. Question generation is the process of creating questions based on given content or context. This can be used in various applications such as educational tools, conversational agents, and search engines to enhance user engagement, understanding, and interaction. The aim is to generate meaningful, relevant, and contextually appropriate questions that stimulate thought, understanding, or further discussion.
+  attributes_num: 14
+  attributes: |-
+    - Attractive: The generated questions are engaging and pique the user''s curiosity, encouraging them to think and respond.
+    - Audience Friendly: The questions are suitable for the target audience, considering their knowledge level, interests, and needs.
+    - Being Friendly: The tone of the questions is approachable and polite, making the user feel comfortable and respected.
+    - Coherence: The questions are logically connected to the given content or context, maintaining a natural flow in the conversation.
+    - Creativity: The questions demonstrate originality and inventiveness, offering fresh perspectives or interesting angles on the topic.
+    - Emojis: Emojis are used appropriately, if at all, to enhance the expression of the questions, adding emotional nuance without being distracting.
+    - Emotion: The questions reflect an understanding of the user''s emotional state, aiming to connect on an empathetic level.
+    - Harmlessness: The questions are safe and respectful, avoiding any content that could be harmful, offensive, or inappropriate.
+    - Interactivity: The questions encourage active participation from the user, prompting them to think, reflect, or engage further with the topic.
+    - Length: The questions are of an appropriate length, being clear and concise while providing enough detail to be meaningful.
+    - Logic: The questions follow a logical structure, making sense within the context and based on sound reasoning.
+    - Relevance: The questions are directly relevant to the given content or context, ensuring they are pertinent and useful for the user.
+    - Style: The questions maintain a consistent and suitable style, whether formal or informal, as appropriate for the context and user.
+    - Vivid: The questions use vivid and descriptive language, making them more engaging and easier to visualize or understand.
+recommendation:
+  scenario: |-
+    The scenario of these two dialogue are recommendation. A recommendation dialogue is a conversation where one party suggests products, services, or actions to another based on their preferences, needs, or interests. The primary goal is to provide helpful, relevant, and personalized advice to assist the user in making informed decisions.
+  attributes_num: 15
+  attributes: |-
+    - Audience Friendly: The dialogue is considerate of the user''s preferences, needs, and comfort, ensuring that the recommendations are tailored and respectful.
+    - Authenticity: The recommendations are genuine and credible, reflecting accurate and trustworthy information.
+    - Being Friendly: The tone of the dialogue is warm and approachable, making the user feel at ease and valued.
+    - Citation: The dialogue includes references or sources to back up the recommendations, enhancing credibility and allowing the user to verify information.
+    - Coherence: The conversation flows logically, with recommendations that are clearly connected to the user''s stated needs and interests.
+    - Coverage: The dialogue addresses all relevant aspects of the user''s query, providing comprehensive recommendations that consider various factors.
+    - Depth: The recommendations are detailed and thorough, offering in-depth insights and explanations to help the user understand the options.
+    - Harmlessness: The dialogue ensures that the recommendations are safe and do not pose any risk or harm to the user.
+    - Information Richness: The dialogue provides a wealth of relevant information, enriching the user''s understanding and aiding in decision-making.
+    - Instruction Following: The dialogue adheres closely to the user''s instructions and requests, ensuring that the recommendations align with their specific needs.
+    - Interactivity: The conversation encourages user engagement, asking questions and seeking feedback to refine and improve the recommendations.
+    - Logic: The recommendations are based on sound reasoning and clear rationale, ensuring they are sensible and well-founded.
+    - Objectivity: The dialogue maintains impartiality, presenting recommendations based on factual information rather than personal bias.
+    - Relevance: The recommendations are directly pertinent to the user''s query and context, ensuring they are useful and applicable.
+    - Timeliness: The recommendations are current and up-to-date, reflecting the latest information and trends.
+roleplay:
+  scenario: |-
+    The scenario of these two dialogue are role play chats. Role play dialogue is an interactive simulation where participants assume specific roles to mimic real-life scenarios for training, education, or entertainment purposes
+  attributes_num: 14
+  attributes: |-
+    - Attractive: The character is engaging and able to capture the user's attention and interest. The dialogue is novel and interesting, sparking the user's curiosity and desire to participate.
+    - Audience Friendly: The character considers the user's needs and feelings, providing a positive interaction experience. It shows respect and understanding towards the user, with information and interaction methods suitable for the user's level and interests.
+    - Being Friendly: The character displays a friendly attitude and tone. The language and behavior are gentle and polite, making the user feel welcome and comfortable.
+    - Coherence: The content of the dialogue is logically clear and connected. Responses naturally link with the previous and following context, avoiding jumps or breaks.
+    - Creativity: The character demonstrates unique ideas and innovative expressions. The dialogue includes novel and interesting viewpoints or expressions, bringing surprise and inspiration to the user.
+    - Emojis: Emojis are appropriately used in the dialogue to enhance the expression. They are used fittingly, adding emotional color and fun without being excessive or inappropriate.
+    - Emotion: The character can express genuine and strong emotions. Emotional expressions are sincere and natural, resonating with the user.
+    - Harmlessness: The character's words and actions do not cause harm or offense to the user or others. It avoids offensive, discriminatory, or harmful statements and behaviors, ensuring the dialogue is safe and respectful.
+    - Instruction Following: The character accurately understands and executes the user's instructions. It accurately comprehends the user's requirements without defying or rejecting them.
+    - Interactivity: The character engages in active and effective interaction with the user. It maintains the interactivity of the dialogue through questions, feedback, and other means, promoting user participation.
+    - Logic: The character's words and actions are logically sound, clearly expressing viewpoints. Responses are well-organized, with reasonable reasoning processes, avoiding contradictions.
+    - Relevance: The character's responses are closely related to the dialogue topic and the user's needs. Answers directly address the user's questions or topics, avoiding digressions or irrelevant content.
+    - Style: The character maintains a consistent response style that matches the expected tone and manner. It keeps a consistent tone and style that fits the user's requested character language style.
+    - Vivid: The character's expressions are vivid and lively, enhancing the attractiveness of the dialogue. It uses concrete and vivid descriptions and language, making the dialogue more visually and emotionally engaging.
+seeking_medical_advice:
+  scenario: |-
+    The scenario of these two dialogue are seeking medical advice. Seeking medical advice involves a conversation where an individual seeks information or guidance regarding health-related concerns, symptoms, treatments, or medical conditions. The primary goal is to obtain accurate, reliable, and relevant information that can aid in understanding or addressing a medical issue, while ensuring the advice is given in a professional, clear, and empathetic manner.
+  attributes_num: 16
+  attributes: |-
+    - Accuracy: The information provided should be medically accurate, based on current medical knowledge and guidelines.
+    - Admit Uncertainty: The dialogue should acknowledge when the information is uncertain or when further professional consultation is necessary.
+    - Authenticity: The advice should be genuine and trustworthy, reflecting real medical knowledge and practices.
+    - Citation: Whenever possible, the information should be backed by credible sources or references to medical literature.
+    - Clarity: The language used should be clear and easy to understand, avoiding medical jargon unless it is explained.
+    - Completeness: The response should cover all relevant aspects of the medical query, providing a thorough answer.
+    - Coverage: The advice should address the full scope of the user''s question, considering various facets of the medical issue.
+    - Feasibility: The recommendations given should be practical and achievable for the user.
+    - Harmlessness: The information should be safe, avoiding any advice that could potentially harm the user.
+    - Logic: The advice should follow a logical sequence, with well-reasoned explanations and conclusions.
+    - Multiple Aspects: The dialogue should consider different perspectives and aspects of the medical issue, such as symptoms, potential causes, and treatment options.
+    - Objectivity: The advice should be unbiased and based on factual information rather than personal opinions.
+    - Professionalism: The tone and content should reflect a professional attitude, maintaining a respectful and serious approach to the medical issue.
+    - Relevance: The response should be directly relevant to the user''s specific medical query or concern.
+    - Style: The communication style should be appropriate for a medical context, maintaining a balance between professionalism and empathy.
+    - Timeliness: The advice should be current, reflecting the latest medical guidelines and research.
+seeking_advice:
+  scenario: |-
+    The scenario of these two dialogue are seeking advice. Seeking advice is a dialogue scenario where one participant requests guidance, recommendations, or solutions to a specific problem or situation. The goal is to provide accurate, practical, and helpful information that can aid the inquirer in making a decision or resolving an issue. This type of dialogue often involves a more structured exchange of information and may require a deeper understanding of the topic at hand.
+  attributes_num: 16
+  attributes: |-
+    - Accuracy: The advice given should be factually correct and based on reliable information.
+    - Admit Uncertainty: The advisor should acknowledge when they are unsure about an answer and avoid providing potentially misleading information.
+    - Audience Friendly: The advice should be tailored to the user''s level of understanding and needs, ensuring it is accessible and relevant.
+    - Authenticity: The advice should be genuine and sincere, reflecting a true intention to help rather than generic or automated responses.
+    - Being Friendly: The tone should be supportive and encouraging, making the user feel comfortable and valued.
+    - Citation: When applicable, the advice should include references to credible sources to back up claims and provide further reading.
+    - Clarity: The advice should be expressed clearly and concisely, avoiding unnecessary jargon or complex language.
+    - Completeness: The response should cover all aspects of the user''s query, providing a thorough and comprehensive answer.
+    - Coverage: The advice should address multiple facets of the issue if relevant, offering a well-rounded perspective.
+    - Feasibility: The proposed solutions or recommendations should be practical and achievable given the user''s context and resources.
+    - Harmlessness: The advice should not cause any harm or potential negative consequences to the user.
+    - Logic: The advice should follow a logical structure, with clear reasoning and justification for the recommendations provided.
+    - Multiple Aspects: The response should consider various angles and implications of the issue, offering a balanced view.
+    - Professional: The advice should be delivered in a professional manner, reflecting expertise and reliability.
+    - Relevance: The advice should be directly pertinent to the user''s query and situation.
+    - Timeliness: The advice should be timely, addressing current and relevant information that can be acted upon promptly.
+solving_exam_question_without_math:
+  scenario: |-
+    The scenario of these two dialogue are solving exam question without math. Solving an exam question without using mathematical methods involves providing an answer through reasoning, logic, conceptual understanding, or qualitative analysis. This approach requires explaining the problem and solution in a way that doesn't rely on numerical calculations but rather on descriptive, theoretical, or illustrative methods.
+  attributes_num: 13
+  attributes: |-
+    - Accuracy:  The response must correctly address the exam question and provide a precise answer based on the relevant concepts. 
+    - Step by Step Explanation: The explanation should be broken down into clear, logical steps that guide the user through the reasoning process in an understandable manner. 
+    - Audience Friendly: The language and tone should be approachable and tailored to the user's level of understanding, avoiding overly technical jargon unless necessary. 
+    - Authenticity: The information provided should be genuine and derived from reliable sources or well-established knowledge, ensuring the user can trust the answer. 
+    - Clarity: The response should be articulated clearly, with well-structured sentences and unambiguous language to avoid any confusion. 
+    - Completeness: The answer should be thorough, covering all aspects of the question without leaving out important details or steps in the explanation. 
+    - Feasibility: The proposed solution should be practical and achievable within the given context, ensuring it can be realistically applied. 
+    - Harmlessness: The content should be safe and respectful, free from any potentially harmful, offensive, or misleading information. 
+    - Logic: The reasoning and arguments presented should follow a logical progression, with each step building on the previous one in a coherent manner. 
+    - Objectivity: The response should be unbiased and based on factual information, avoiding any subjective opinions or unfounded claims. 
+    - Professional: The dialogue should reflect a professional attitude, demonstrating knowledge and expertise in the subject matter. 
+    - Relevance: The answer should be directly pertinent to the exam question, without digressing into unrelated topics. 
+    - Timeliness: The answer should be updated with the currently widely recognized standards. The answer cannot use outdated methods that have been proven to be incorrect
+language_polishing:
+  scenario: |-
+    The scenario of these two dialogue are text polishing. Text polish refers to the process of refining and enhancing a piece of text to improve its clarity, readability, and overall quality. This includes correcting grammatical errors, improving sentence structure, ensuring coherence and cohesion, and making the text more engaging and polished for the intended audience. The goal of language polishing is to produce a well-crafted and professional piece of writing that effectively communicates the intended message.
+  attributes_num: 15
+  attributes: |-
+    - Attractive: The dialogue is engaging and captivating, drawing the reader''s attention and maintaining their interest throughout the conversation.
+    - Audience Friendly: The dialogue is tailored to the audience''s needs and preferences, making it easy to understand and enjoyable to read.
+    - Coherence: The dialogue is logically structured and flows smoothly, with each part connecting seamlessly to the next, ensuring a clear and understandable progression of ideas.
+    - Completeness: The dialogue provides all necessary information and context, leaving no gaps or unanswered questions, and fully addressing the topic at hand.
+    - Creativity: The dialogue demonstrates originality and inventiveness, using fresh and imaginative language to enhance the text and make it more compelling.
+    - Depth: The dialogue explores the topic in detail, providing insightful and thorough analysis or discussion, rather than superficial treatment.
+    - Faithfulness: The dialogue accurately reflects the original message or content, maintaining the intended meaning and nuances without introducing errors or distortions.
+    - Harmlessness: The dialogue ensures that all content is safe, respectful, and free from harmful or offensive material, promoting a positive and inclusive environment.
+    - Instruction Following: The dialogue adheres to any specific guidelines or instructions provided, ensuring that the final product meets the desired criteria and expectations.
+    - Logic: The dialogue follows a rational and consistent line of reasoning, with clear cause-and-effect relationships and sound arguments.
+    - Pointing Out: The dialogue clearly identifies and highlights areas that have been modified or improved, providing transparency and accountability in the editing process.
+    - Professional: The dialogue maintains a high standard of quality, demonstrating expertise and attention to detail, and presenting the text in a polished and refined manner.
+    - Relevance: The dialogue stays focused on the topic and is pertinent to the subject matter, avoiding unnecessary digressions or irrelevant information.
+    - Style: The dialogue maintains a consistent and appropriate style, whether formal or informal, that aligns with the intended tone and purpose of the text.
+    - Vivid: The dialogue uses descriptive and dynamic language to create a vivid and engaging reading experience, bringing the text to life for the reader.
+text_summarization:
+  scenario: |-
+    The scenario of these two dialogue are text summarization. Text summarization is the process of condensing a piece of text to a shorter version, retaining the most important information and meaning. It aims to provide a concise and coherent summary that accurately reflects the main points of the original text, making it easier for readers to grasp the essential content quickly.
+  attributes_num: 13
+  attributes: |-
+    - Accuracy: The summary correctly represents the key points and information from the original text without introducing errors or distortions.
+    - Citation: Proper attribution is given to the original sources of information, ensuring that the summary respects intellectual property and academic standards.
+    - Clarity: The summary is easy to read and understand, with clear and straightforward language that effectively communicates the main ideas.
+    - Coherence: The summary flows logically and smoothly, with sentences and ideas connected in a way that makes sense and is easy to follow.
+    - Completeness: The summary includes all the essential points and information from the original text, without omitting critical details.
+    - Faithfulness: The summary remains true to the original text, accurately reflecting its meaning, tone, and intent without adding personal interpretation or bias.
+    - Harmlessness: The summary avoids including any harmful, offensive, or inappropriate content, ensuring it is safe for all audiences.
+    - Instruction Following: The summary adheres to any specific guidelines or instructions provided, such as length constraints or focus areas.
+    - Length: The summary is of an appropriate length, providing a concise yet comprehensive overview of the original text without being too brief or overly detailed.
+    - Logic: The summary follows a logical structure, with ideas presented in a clear and rational order that enhances understanding.
+    - Objectivity: The summary maintains a neutral and unbiased perspective, presenting the information fairly without personal opinions or judgments.
+    - Relevance: The summary focuses on the most relevant and important information from the original text, excluding extraneous or trivial details.
+    - Result at the Beginning: The summary provides a clear and immediate indication of the main result or conclusion at the beginning, giving readers a quick understanding of the core message.
+text_to_text_translation:
+  scenario: |-
+    The scenario of these two dialogue are text to text translation. Text-to-text translation is the process of converting text from one language to another while preserving the meaning, tone, and context of the original text.
+  attributes_num: 13
+  attributes: |-
+    - Accuracy: The translation correctly conveys the meaning of the original text without errors.
+    - Authenticity: The translation maintains the cultural and contextual nuances of the original text.
+    - Clarity: The translated text is easily understandable and free of ambiguity.
+    - Coherence: The translation flows naturally and logically, maintaining the structure and readability of the original text.
+    - Completeness: The translation includes all elements of the original text, with nothing omitted or added.
+    - Faithfulness: The translation remains true to the original text''s content, style, and tone.
+    - Harmlessness: The translation avoids any language that could be offensive or harmful.
+    - Instruction Following: The translation adheres to any specific guidelines or instructions given for the task.
+    - Logic: The translation follows a logical sequence, making sense in the context of the target language.
+    - Objectivity: The translation is free from personal bias or subjective interpretation.
+    - Professionalism: The translation reflects a high level of skill and expertise, with proper grammar and syntax.
+    - Relevance: The translation is pertinent to the original text and its intended purpose.
+    - Style: The translation maintains the original text''s style, whether formal, informal, technical, or literary.
+value_judgement:
+  scenario: |-
+    The scenario of these two dialogue are value judgement. Value Judgement is the process of evaluating or making decisions based on personal beliefs, values, or standards. It involves assessing situations, actions, or outcomes to determine their worth, significance, or alignment with certain ethical, moral, or cultural principles. In dialogue, value judgement often requires careful consideration of various perspectives and the potential impact of the judgement on different stakeholders.
+  attributes_num: 11
+  attributes: |-
+    - Admit Uncertainty: The answer acknowledges the limitations of the information provided and expresses openness to other viewpoints, showing humility and a willingness to reconsider.
+    - Audience Friendly: The dialogue is considerate of the user''s values and beliefs, fostering a respectful and inclusive interaction that makes the user feel understood and respected.
+    - Authenticity: The dialogue reflects genuine and honest opinions, avoiding pretense or insincerity, thereby building trust with the user.
+    - Being Friendly: The character maintains a friendly and approachable tone, ensuring the user feels comfortable sharing their own values and judgements.
+    - Coverage: The dialogue addresses all relevant aspects of the value judgement, providing a comprehensive overview that helps the user understand the full context.
+    - Depth: The dialogue delves deeply into the nuances of the value judgement, offering detailed explanations and justifications for different viewpoints.
+    - Harmlessness: The dialogue ensures that no content is harmful, offensive, or disrespectful, maintaining a safe and considerate environment for discussing sensitive topics.
+    - Insight: The dialogue provides valuable insights and perspectives that help the user gain a deeper understanding of the value judgement in question.
+    - Logic: The dialogue follows a logical sequence, with coherent arguments and sound reasoning that support the value judgement being discussed.
+    - Multiple Aspects: The dialogue considers and presents multiple facets of the value judgement, acknowledging the complexity and diversity of perspectives involved.
+    - Objectivity: The dialogue strives to remain impartial and unbiased, presenting information and arguments fairly without letting personal opinions dominate.
+verifying_fact:
+  scenario: |-
+    The scenario of these two dialogue are verifying fact. Verifying fact in a dialogue context involves confirming the accuracy and reliability of information presented during the conversation. This process ensures that any factual claims are supported by evidence or authoritative sources, and it aims to provide clear, precise, and truthful responses to the user's queries.
+  attributes_num: 14
+  attributes: |-
+    - Accuracy: The information provided is correct and free from errors, reflecting true and precise data.
+    - Admit Uncertainty: The model acknowledges when it is uncertain or lacks sufficient information, rather than providing potentially incorrect details.
+    - Authenticity: The responses are genuine and credible, avoiding fabricated or misleading information.
+    - Citation: When applicable, the model provides references or sources to support factual claims, enhancing the reliability of the information.
+    - Clarity: The information is presented in a clear and understandable manner, avoiding ambiguity and confusion.
+    - Completeness: The responses are thorough and cover all relevant aspects of the query, providing a comprehensive answer.
+    - Faithfulness: The information remains true to the original sources or data, without distortion or misrepresentation.
+    - Harmlessness: The information provided does not cause harm or offense, maintaining a respectful and safe dialogue.
+    - Information Richness: The responses contain a wealth of relevant and useful information, enriching the user''s understanding of the topic.
+    - Instruction Following: The model adheres to the user''s instructions or specific queries, providing relevant and directed responses.
+    - Objectivity: The information is presented in an unbiased and impartial manner, avoiding personal opinions or subjective interpretations.
+    - Relevance: The responses are directly related to the user''s query, staying on topic and providing pertinent information.
+    - Result at the Beginning: The key information or answer is provided upfront, ensuring that the user receives the most important details immediately.
+    - Timeliness: The information provided is up-to-date and reflects the most current data or findings available.
+writing_legal_document:
+  scenario: |-
+    The scenario of these two dialogue are writing legal document. These dialogues involve writing legal documents. Writing legal documents is a formal and precise process that involves drafting, reviewing, and finalizing legal texts such as contracts, wills, deeds, and legal agreements. The aim is to ensure clarity, accuracy, and compliance with legal standards and requirements. The language used is typically formal, unambiguous, and detailed to avoid misinterpretation and ensure all legal aspects are covered.
+  attributes_num: 12
+  attributes: |-
+    - Accuracy: The dialogue must provide precise and correct information, ensuring that all legal terms, conditions, and clauses are correctly stated and legally sound.
+    - Admit Uncertainty: The dialogue should acknowledge any areas of uncertainty or lack of information, providing guidance on where to seek further clarification or legal advice.
+    - Authenticity: The dialogue should reflect genuine legal standards and practices, using appropriate legal terminology and referencing actual legal principles and precedents.
+    - Citation: The dialogue should include references to relevant laws, statutes, regulations, or legal cases to support the information provided, ensuring the document''s credibility and legal validity.
+    - Clarity: The dialogue must be clear and understandable, avoiding overly complex language or jargon that could confuse the reader. Legal terms should be explained where necessary.
+    - Completeness: The dialogue should cover all necessary aspects of the legal document, ensuring that no critical information or sections are omitted.
+    - Harmlessness: The dialogue must ensure that the content is not harmful or misleading, providing accurate legal information that does not put the user at risk of legal issues.
+    - Layout: The dialogue should guide the user in structuring the legal document properly, ensuring that it follows a logical and accepted format for legal texts.
+    - Logic: The dialogue should follow a logical sequence, ensuring that the legal arguments and clauses are presented in a coherent and rational manner.
+    - Multiple Aspects: The dialogue should consider various aspects of the legal issue at hand, providing a comprehensive view that addresses different angles and potential implications.
+    - Objectivity: The dialogue should maintain an objective tone, presenting information and advice based on legal standards and facts rather than personal opinions or biases.
+    - Professional: The dialogue should exhibit a high level of professionalism, reflecting the formal and serious nature of legal document drafting, and ensuring that all advice is sound and reliable.
+writing_social_media_post:
+  scenario: |-
+    The scenario of these two dialogue are writing a social media post. Writing a social media post involves crafting a message intended for sharing on social platforms like Facebook, Twitter, Instagram, etc. The goal is to engage the audience, convey information or emotions effectively, and encourage interaction such as likes, comments, and shares. A successful social media post should be concise, visually appealing, and tailored to the platform''s unique characteristics and audience.
+  attributes_num: 15
+  attributes: |-
+    - Attractive: The post captures the audience''s attention with compelling visuals, interesting content, or engaging language, making it stand out in a crowded feed.
+    - Audience Friendly: The post is considerate of the audience''s preferences, interests, and needs, ensuring it resonates well with them.
+    - Being Friendly: The tone of the post is approachable and warm, making the audience feel welcomed and valued.
+    - Clarity: The message is clear and easy to understand, avoiding ambiguity and confusion.
+    - Coherence: The post flows logically and maintains a consistent theme or message throughout.
+    - Creativity: The post shows originality and imaginative thinking, offering unique content that differentiates it from others.
+    - Emojis: Emojis are used appropriately to enhance the message, add emotional nuance, and make the post more visually engaging without overwhelming the text.
+    - Emotion: The post conveys genuine and strong emotions, making it more relatable and engaging for the audience.
+    - Harmlessness: The content is safe and respectful, avoiding any offensive or harmful language or imagery.
+    - Length: The post is concise and to the point, providing sufficient information without being overly lengthy or too brief.
+    - Logic: The post follows a logical structure, with ideas presented in a coherent and rational order.
+    - Originality: The content is unique and not a mere repetition of existing posts, offering fresh perspectives or information.
+    - Style: The post maintains a consistent and appropriate style, whether formal or informal, tailored to the platform and audience.
+    - Timeliness: The post is relevant to current events, trends, or the audience''s immediate interests, making it timely and topical.
+    - Vivid: The post uses vivid and descriptive language or visuals to create a strong impression and engage the audience''s senses.
+classification_identification:
+  scenario: |-
+    The scenario of these two dialogue are classification identification. Classification identification involves accurately classifying or identifying one or multiple objects provided by the user into predefined specific categories. This task requires analyzing the characteristics and attributes of the objects, comparing them against established criteria, and assigning them to the most appropriate categories. The process demands a thorough understanding of the categories and their distinguishing features to ensure precise and reliable classification or identification, thereby facilitating organized and systematic categorization of diverse objects based on their inherent properties.
+  attributes_num: 5
+  attributes: |-
+    - Accuracy: The proportion of correctly classified data. High accuracy indicates that most classification results are correct.
+    - Clarity: Whether the classification results and process are clear and easy to understand.
+    - Completeness: Whether the model can cover all categories and possible classification scenarios.
+    - Faithfulness: Whether the classification results faithfully represent the actual situation of the input data.
+    - Relevance: Whether the classification results are highly relevant to the input data.
+title_generation:
+  scenario: |-
+    The scenario of these two dialogue are title generation. Title generation involves creating an appropriate and compelling title for a given text or based on a description of a work. This task requires understanding the core themes, key messages, and overall tone of the content to craft a title that captures its essence and engages the intended audience. The generated title should be concise, relevant, and reflective of the content's main ideas, ensuring it effectively summarizes and represents the work while attracting the reader's interest.
+  attributes_num: 5
+  attributes: |-
+    - Creativity: Whether the title is creative and engaging.
+    - Clarity: Whether the title is clear and easy to understand.
+    - Attractiveness: Whether the title can attract readers' attention.
+    - Audience Friendly: Whether the title meets the interests and needs of the target audience.
+    - Relevance: Whether the title is highly relevant to the content.
+reading_comprehension:
+  scenario: |-
+    The scenario of these two dialogue are reading comprehension. Reading comprehension involves answering questions that can be directly answered by information contained within the attached passage. This task requires carefully reading and understanding the passage, identifying relevant details, and accurately extracting information to respond to the questions. The answers should be precise, directly derived from the text, and demonstrate a clear grasp of the passage's content. The goal is to assess and ensure comprehension by providing accurate and concise answers based on the given material.
+  attributes_num: 5
+  attributes: |-
+    - Accuracy: The correctness of answers to questions about the reading material.
+    - Depth: The depth and detail of the answers, and whether they provide an in-depth understanding.
+    - Completeness: Whether the answers are comprehensive and cover all necessary information.
+    - Clarity: Whether the answers are clear and easy to understand.
+    - Insight: Whether the answers demonstrate a deep understanding and insight into the reading material.
+keywords_extraction:
+  scenario: |-
+    The scenario of these two dialogue are keywords extraction. Keywords extraction involves identifying and extracting the most important and relevant keywords from a given piece of text. This task requires analyzing the text to discern its main themes and significant terms that encapsulate the core ideas and concepts. The extracted keywords should effectively represent the content, making it easier to understand, categorize, and retrieve the information. The goal is to highlight the essential elements of the text, facilitating better indexing, searchability, and comprehension of the material.
+  attributes_num: 5
+  attributes: |-
+    - Accuracy: Whether the extracted keywords accurately reflect the main content of the text.
+    - Relevance: Whether the extracted keywords are highly relevant to the text content.
+    - Completeness: Whether the extracted keywords are comprehensive and cover the main themes of the text.
+    - Clarity: Whether the extracted keywords are clear and easy to understand.
+    - Faithfulness: Whether the extracted keywords are faithful to the text content.
+information_extraction:
+  scenario: |-
+    The scenario of these two dialogue are information extraction. Information extraction involves extracting specific categories of information as specified by the user from a given piece of text. This task requires analyzing the text to identify and isolate relevant data that fits the user-defined categories. The process demands attention to detail and an understanding of the context to accurately locate and extract the necessary information. The goal is to provide the user with precise and organized data that meets their specified criteria, facilitating the efficient retrieval of targeted information from the text.
+  attributes_num: 5
+  attributes: |-
+    - Accuracy: Whether the extracted information is accurate.
+    - Completeness: Whether the extracted information is comprehensive and includes all necessary details.
+    - Relevance: Whether the extracted information is highly relevant to the input data.
+    - Clarity: Whether the extracted information is clear and easy to understand.
+    - Faithfulness: Whether the extracted information is faithful to the original data.
+topic_modeling:
+  scenario: |-
+    The scenario of these two dialogue are topic modeling. Topic modeling involves extracting high-level topics or themes from a given text to identify and summarize the main subjects discussed. This task requires analyzing the text to uncover patterns and recurring themes, grouping related terms, and determining the overarching topics that encapsulate the content. The goal is to provide a clear and concise representation of the primary themes within the text, facilitating a deeper understanding of its core discussions and focus areas.
+  attributes_num: 5
+  attributes: |-
+    - Coherence: Whether the topics generated by the model are consistent and logical.
+    - Completeness: Whether the topic model covers all major themes and sub-themes.
+    - Relevance: Whether the generated topics are highly relevant to the text content.
+    - Clarity: Whether the topic descriptions are clear and easy to understand.
+    - Information Richness: Whether the generated topics are rich in information and provide valuable insights.
+ranking:
+  scenario: |-
+    The scenario of these two dialogue are ranking. Ranking involves sorting a set of items based on specified criteria. This task requires evaluating each item according to the given criteria, comparing their attributes, and organizing them in order of preference or importance. The goal is to provide a clear and logical sequence that reflects the relative standing of each item in relation to the others based on the established criteria.
+  attributes_num: 5
+  attributes: |-
+    - Accuracy: Whether the ranking accurately reflects the true situation of the data.
+    - Relevance: Whether the ranking results are highly relevant to the user's query or needs.
+    - Completeness: Whether the ranking is comprehensive and covers all relevant items.
+    - Clarity: Whether the ranking results are clear and easy to understand.
+    - Faithfulness: Whether the ranking is faithful to the data source or the user's query intent.
+default:
+  scenario: |-
+    The scenario of these two dialogue are default. Default is an unlabeled scenario, involves engaging in open-ended conversations, providing information, answering questions, and assisting with various requests based on user instructions. The goal is to facilitate effective and meaningful communication, addressing the user's needs and inquiries in a versatile and comprehensive manner.
+  attributes_num: 12
+  attributes: |-
+    - Attractive: The response is engaging and able to capture the user's interest, making the conversation enjoyable and lively.
+    - Audience Friendly: The response is considerate of the user's needs and feelings, fostering a positive and inclusive interaction.
+    - Coherence: The response flows naturally and logically, with responses that smoothly connect to previous and following statements.
+    - Creativity: The character demonstrates unique and imaginative thinking, contributing original and interesting topics to the conversation.
+    - Emotion: The character expresses genuine and strong emotions, making the conversation more relatable and engaging.
+    - Harmlessness: The response ensures that no content is harmful or offensive, maintaining a safe and respectful environment.
+    - Interactivity: The response promotes active participation and engagement, encouraging the user to contribute to the conversation.
+    - Length: The responses are of appropriate length, providing sufficient detail without being overly long or too brief.
+    - Logic: The response follows a logical sequence, with coherent explanations and sound reasoning.
+    - Relevance: The responses are directly relevant to the user's statements and the overall topic of the conversation.
+    - Style: The character maintains a consistent and appropriate style, whether formal or informal, as suited to the user's chitchat context.
+    - Vivid: The response is vivid and lively, using concrete and imaginative language to make the conversation more visually and emotionally engaging.
+multiple_dialogues:
+  attributes_num: 5
+  attributes: |-
+    - Consistency: During the entire conversation, whether the responses remain consistent and free of contradictions.
+    - Engagement: Whether the conversation can continuously attract the user's interest and encourage further interaction.
+    - Context Awareness: Whether the model can understand and utilize information from previous parts of the conversation to provide relevant responses.
+    - Error Handling: After the user points out an error, whether the model can handle and correct misunderstandings or incorrect information in the conversation.
+    - Follow-up Questions: Whether the model can ask meaningful follow-up questions to drive the conversation deeper.
