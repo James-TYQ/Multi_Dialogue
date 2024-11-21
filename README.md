@@ -1,5 +1,7 @@
 # SaMer: A Scenario-aware Multi-Dimensional Evaluation for Large Language Models
 
+SaMer is a cutting-edge LLM Judge designed for assessing the quality of large language model (LLM) outputs. Unlike traditional evaluators with fixed dimensions, SaMer dynamically identifies and prioritizes relevant evaluation criteria based on the query context. By leveraging a large-scale dataset of fine-grained preferences across diverse scenarios, it provides interpretable, multi-dimensional evaluations, balancing both overall and detailed scoring. SaMer's flexibility and robustness make it a versatile tool for improving LLM performance in various real-world applications.
+
 ![SaMer](./figure/SaMer.png)
 
 <h3 id="3.1">⬇️ Step 1: Installation</h3>
