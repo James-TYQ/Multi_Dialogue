@@ -64,7 +64,7 @@ class SaMerPipeline:
         """
         assert len(messages) <= 2, 'message format: [{"role": "user", "content": "..."}, {"role": "assistant", "content": "..."}]'
 
-        messages = [[{'role': 'user', 'content': messages[0][0]['content']}]] + messages
+        messages = [[{'role': 'user', 'content': messages[0]['content']}]] + [messages]
 
         # apply chat template
         inputs = self.tokenizer.apply_chat_template(
@@ -96,7 +96,7 @@ class SaMerPipeline:
                 overall_scores = (masked_weights * scores.sigmoid()).sum(dim=-1)
                 overall_scores = torch.tensor(overall_scores[1:].clone().detach(), dtype=torch.float32)
 
-                selected_dims = [self.dimensions[i] for i, p in enumerate(dim_prob) if p == 1.0]
+                selected_dims = [self.dimensions[i] for i, p in enumerate(dim_prob[0]) if p == 1.0]
                 
             except Exception as e:
                 print(e)
