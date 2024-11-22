@@ -1,5 +1,5 @@
 from typing import Dict, List
-from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers import LlamaForSequenceClassification, AutoTokenizer
 import torch
 import torch.nn as nn
 
@@ -33,7 +33,7 @@ class SaMerClassifier(nn.Module):
         weights = self.weighting_layer(x)
         return torch.cat([scores, dim_prob, weights], dim=-1)
 
-class LlamaForMDQRwardModel(AutoModelForSequenceClassification):
+class LlamaForMDQRwardModel(LlamaForSequenceClassification):
     def __init__(self, config):
         super().__init__(config)
         self.score = SaMerClassifier(config.hidden_size, config.num_labels//2)
@@ -96,7 +96,7 @@ class SaMerPipeline:
                 overall_scores = (masked_weights * scores.sigmoid()).sum(dim=-1)
                 overall_scores = torch.tensor(overall_scores[1:].clone().detach(), dtype=torch.float32)
 
-                selected_dims = [self.dimensions[i] for i, p in enumerate(dim_prob[0]) if p == 1.0]
+                selected_dims = [self.dimensions[i] for i, p in enumerate(dim_prob[0]) if p > 0]
                 
             except Exception as e:
                 print(e)

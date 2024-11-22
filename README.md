@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="./">📖 Paper</a> •
-  <a href="./">🤖 Model</a> •
+  <a href="https://drive.google.com/file/d/1jyZg-SfLVSjWE4G7sic-3VN_g62qK51l/view?usp=sharing">🤖 Model</a> •
   <a href="./data/">🤗 Dataset</a>
 </p>
 
@@ -40,8 +40,8 @@ pipeline = SaMerPipeline(model_id="YOUR_MODEL_PATH")
 
 # inference using the following data format:
 chat_messages = [
-    {"role": "user", "content": "What is the key difference between a cat and a dog?"},
-    {"role": "assistant", "content": "Cats have four legs, while dogs have four legs."}
+    {"role": "user", "content": "Stephen has 2 apples. Yesterday he had 1 apple. How many apples does he have today?"},
+    {"role": "assistant", "content": "Stephen has 2 apples today."}
 ]
 result = pipeline(chat_messages)
 selected_dims_name = result['evaluation_dim'] # the name of the selected dimensions
@@ -62,6 +62,7 @@ bash train.sh   # For better training, you need to adjust some parameters in the
 3. The description of each dimension in each scenario can be found in the `utils/prompt/metrics.yaml`.
 3. The OOD data we used to evaluate the dimension selection performance of SaMer and baselines lies in `data/benchmark/OOD`.
 4. The details of why SaMer can outperform GPT-4o on Vicuna Bench can be found in the `other_resources/SaMer_vs_gpt4o_vicunabench`.
+5. `SaMer-llama3-8B` checkpoint is available [here](https://drive.google.com/file/d/1jyZg-SfLVSjWE4G7sic-3VN_g62qK51l/view?usp=sharing).
 
 <h3 id="3.4"> 📖 Data Construction </h3>
 
