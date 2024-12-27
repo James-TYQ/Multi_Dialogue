@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="./">📖 Paper</a> •
-  <a href="https://drive.google.com/file/d/1jyZg-SfLVSjWE4G7sic-3VN_g62qK51l/view?usp=sharing">🤖 Model</a> •
+  <a href="https://drive.google.com/file/d/1VxA48dJjU78ARg9tLDcRkMBuCnlhxZWM/view?usp=sharing">🤖 Model</a> •
   <a href="./data/">🤗 Dataset</a>
 </p>
 
