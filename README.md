@@ -3,7 +3,7 @@
 <h1 align="center"> SaMer: A Scenario-aware Multi-Dimensional Evaluation for Large Language Models </h1>
 
 <p align="center">
-  <a href="./">📖 Paper</a> •
+  <a href="https://openreview.net/pdf?id=aBnVU5DL3I">📖 Paper</a> •
   <a href="https://drive.google.com/file/d/1VxA48dJjU78ARg9tLDcRkMBuCnlhxZWM/view?usp=sharing">🤖 Model</a> •
   <a href="./data/">🤗 Dataset</a>
 </p>
@@ -52,7 +52,7 @@ overall_score = result['overall_score'] # the overall score (a scale from 0 to 1
 If you need to train using SaMer's format, first construct the training data according to the data format in `data/train/seeds.json`. Then, use the following command to train:
 
 ```bash
-bash train.sh   # For better training, you need to adjust some parameters in the file.
+bash train_RM.sh   # For better training, you need to adjust some parameters in the file.
 ```
 
 <h3 id="3.3">📜 Tips </h3>
