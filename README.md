@@ -2,8 +2,8 @@ Project Goal: Learning a light-weight multi-turn dialogue evaluator from multipl
 
 Usage: samer虚拟环境
 
-相关脚本: 1. train_Multi.sh (执行脚本)
-         2. Multi_Turn_Train.py (训练脚本)
+相关脚本: 1. train_Multi.sh (执行脚本) -> 基于train_RM.sh
+         2. Multi_Turn_Train.py (训练脚本) -> 基于train_preference.py
          3. Multi_Turn_Train_Data （文件夹存储数据），Multi_Turn_Train_Data/eval为测试集，Multi_Turn_Train_Data/train为部分训练集，Multi_Turn_Train_Data/temp为临时数据，all_data.json为当前所有训练数据
 
 主要改动来自samer: 1. 只训练了一个scoring layer
@@ -12,4 +12,6 @@ Usage: samer虚拟环境
 
 目前问题: 1. sensitibity和specificity参数无法更新
          2. 损失函数无法收敛 (似乎固定为ln2) 
+
+主题框架基于samer, 损失函数框架基于: https://github.com/SMBU-MM/OF_BIQA/blob/main/TrainModel.py (图像质量预测)
 
