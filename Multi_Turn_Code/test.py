@@ -18,8 +18,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # 添加 token 认证
-from huggingface_hub import login
-login("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")
+
 
 # 模型路径
 MODEL_PATH = "./results/multi_turn_ArmoRM-Llama3-8B-v0.1_bsz16_lr5e-5_ss_lr5e-3_sens0.8_spec0.6_epochs1_warmup0.1_conf0.0_labeltemp2.0multi-turn-dialogue"
