@@ -1,9 +1,7 @@
-import os
+from typing import Dict, List
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, LlamaForSequenceClassification
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, LlamaForSequenceClassification
-from typing import Dict, List
 import logging
 
 logger = logging.getLogger(__name__)
@@ -23,124 +21,64 @@ class SaMerClassifier(nn.Module):
         mean = self.scoring_layer(x)
         return mean
 
+class LlamaForSaMerModel(LlamaForSequenceClassification):
+    """使用SaMer分类器的Llama模型"""
+    def __init__(self, config):
+        super().__init__(config)
+        self.score = SaMerClassifier(config.hidden_size, config.num_labels)
+
 class SaMerPipeline:
-    def __init__(self, model_id, trust_remote_code=True, torch_dtype=torch.float32, device_map=None, max_length=4096):
+    """多轮对话评估管道"""
+    def __init__(self, model_id, device_map="auto", torch_dtype=torch.bfloat16, 
+                 truncation=True, trust_remote_code=False, max_length=8192):
         """
         初始化SaMer评估管道
         
         Args:
             model_id: 模型ID或本地路径
-            trust_remote_code: 是否信任远程代码
+            device_map: 设备映射策略
             torch_dtype: 模型使用的数据类型
-            device_map: 设备映射
+            truncation: 是否截断过长的输入
+            trust_remote_code: 是否信任远程代码
             max_length: 最大序列长度
         """
-        self.model_id = model_id
-        self.torch_dtype = torch_dtype
-        self.max_length = max_length
+        # 加载模型和分词器
+        try:
+            self.model = LlamaForSaMerModel.from_pretrained(
+                model_id,
+                device_map=device_map,
+                trust_remote_code=trust_remote_code,
+                torch_dtype=torch_dtype,
+            )
+            logger.info("成功加载LlamaForSaMerModel模型")
+        except Exception as e:
+            logger.warning(f"加载LlamaForSaMerModel失败: {e}")
+            try:
+                self.model = AutoModelForSequenceClassification.from_pretrained(
+                    model_id,
+                    device_map=device_map,
+                    trust_remote_code=trust_remote_code,
+                    torch_dtype=torch_dtype,
+                )
+                logger.info("成功加载AutoModelForSequenceClassification模型")
+            except Exception as e:
+                logger.error(f"加载模型失败: {e}")
+                raise
         
-        # 加载tokenizer
         self.tokenizer = AutoTokenizer.from_pretrained(
-            model_id, 
-            trust_remote_code=trust_remote_code,
-            use_fast=True
+            model_id,
+            use_fast=True,
         )
         
         # 确保tokenizer有pad_token
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
-        
-        # 修改：使用更安全的模型加载方式，避免device_map和内存问题
-        try:
-            # 尝试使用CPU加载模型，避免OOM
-            self.model = AutoModelForSequenceClassification.from_pretrained(
-                model_id,
-                trust_remote_code=trust_remote_code,
-                torch_dtype=torch_dtype,
-                low_cpu_mem_usage=True,
-                offload_folder="offload_folder",  # 添加离线文件夹
-                offload_state_dict=True,  # 启用状态字典卸载
-                device_map=None  # 明确设置为None
-            )
-            logger.info("成功使用AutoModelForSequenceClassification加载模型")
-        except Exception as e:
-            logger.warning(f"使用AutoModelForSequenceClassification加载失败: {e}")
-            try:
-                # 尝试使用LlamaForSequenceClassification加载
-                self.model = LlamaForSequenceClassification.from_pretrained(
-                    model_id,
-                    trust_remote_code=trust_remote_code,
-                    torch_dtype=torch_dtype,
-                    low_cpu_mem_usage=True,
-                    offload_folder="offload_folder",
-                    offload_state_dict=True,
-                    device_map=None
-                )
-                logger.info("成功使用LlamaForSequenceClassification加载模型")
-            except Exception as e2:
-                logger.error(f"使用LlamaForSequenceClassification加载也失败: {e2}")
-                
-                # 最后尝试：使用safetensors加载
-                try:
-                    from transformers import AutoConfig
-                    config = AutoConfig.from_pretrained(model_id)
-                    
-                    # 根据配置创建模型
-                    if hasattr(config, "model_type") and config.model_type == "llama":
-                        self.model = LlamaForSequenceClassification.from_pretrained(
-                            model_id,
-                            config=config,
-                            trust_remote_code=trust_remote_code,
-                            torch_dtype=torch_dtype,
-                            low_cpu_mem_usage=True,
-                            device_map=None
-                        )
-                    else:
-                        self.model = AutoModelForSequenceClassification.from_pretrained(
-                            model_id,
-                            config=config,
-                            trust_remote_code=trust_remote_code,
-                            torch_dtype=torch_dtype,
-                            low_cpu_mem_usage=True,
-                            device_map=None
-                        )
-                    logger.info("成功使用配置方式加载模型")
-                except Exception as e3:
-                    logger.error(f"所有加载方式都失败: {e3}")
-                    raise RuntimeError(f"无法加载模型: {e}, {e2}, {e3}")
-        
-        # 加载敏感度和特异度参数
-        self.sensitivity = 0.8
-        self.specificity = 0.6
-        
-        # 尝试加载训练好的敏感度和特异度参数
-        ss_path = os.path.join(model_id, "sensitivity_specificity.pt")
-        if os.path.exists(ss_path):
-            try:
-                ss_dict = torch.load(ss_path, map_location="cpu")
-                self.sensitivity = ss_dict.get("sensitivity_value", 0.8)
-                self.specificity = ss_dict.get("specificity_value", 0.6)
-                logger.info(f"加载敏感度: {self.sensitivity:.4f}, 特异度: {self.specificity:.4f}")
-            except Exception as e:
-                logger.warning(f"加载敏感度和特异度参数失败: {e}")
-        
-        # 将模型移动到GPU（如果可用）
-        self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        # 修改：使用to方法时添加非阻塞选项，避免OOM
-        if self.device == "cuda":
-            try:
-                # 尝试将整个模型移到GPU
-                self.model = self.model.to(self.device)
-            except Exception as e:
-                logger.warning(f"无法将整个模型加载到GPU: {e}")
-                self.device = "cpu"
-                logger.info("回退到CPU模式")
-        
-        self.model.eval()
-        self.dimensions = ["结论"]
-    
-    # 其余方法保持不变
-    def __call__(self, messages: List[Dict[str, str]]) -> Dict:
+            
+        self.truncation = truncation
+        self.device = self.model.device
+        self.max_length = max_length
+
+    def __call__(self, messages: List[Dict[str, str]]) -> Dict[str, float]:
         """
         评估对话质量
         
@@ -151,102 +89,64 @@ class SaMerPipeline:
             包含评估结果的字典
         """
         # 构建输入文本
-        input_text = self._format_messages(messages)
+        inputs = self.tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=False
+        )
         
-        # 对输入文本进行编码
-        inputs = self.tokenizer(
-            input_text, 
-            return_tensors="pt", 
-            padding=True, 
-            truncation=True,
+        input_ids = self.tokenizer(
+            inputs,
+            return_tensors="pt",
+            padding=True,
+            truncation=self.truncation,
             max_length=self.max_length
         ).to(self.device)
         
         # 进行推理
         with torch.no_grad():
-            outputs = self.model(**inputs)
+            outputs = self.model(**input_ids)
             logits = outputs.logits
         
+        # 计算结论得分
         conclusion_score = torch.sigmoid(logits[0, 0]).item()
-        dimensional_scores = {"结论": conclusion_score}
-        overall_score = conclusion_score
-        evaluation_dim = ["结论"]
         
         return {
-            "dimensional_score": dimensional_scores,
-            "overall_score": overall_score,
-            "evaluation_dim": evaluation_dim,
-            "conclusion": dimensional_scores.get("结论", 0.5)
+            "dimensional_score": {"结论": conclusion_score},
+            "overall_score": conclusion_score,
+            "evaluation_dim": ["结论"],
+            "conclusion": conclusion_score
         }
     
-    def _format_messages(self, messages):
+    def compare_responses(self, dialog_A, dialog_B):
         """
-        将消息列表格式化为模型输入文本
+        比较两个对话的质量
         
         Args:
-            messages: 对话消息列表
-            
-        Returns:
-            格式化后的文本
-        """
-        formatted_text = ""
-        
-        for msg in messages:
-            role = msg["role"]
-            content = msg["content"]
-            
-            if role == "user":
-                formatted_text += f"Human: {content}\n\n"
-            elif role == "assistant":
-                formatted_text += f"Assistant: {content}\n\n"
-        
-        return formatted_text.strip()
-    
-    def compare_responses(self, user_query, response_a, response_b):
-        """
-        比较两个回答的质量
-        
-        Args:
-            user_query: 用户问题
-            response_a: 回答A
-            response_b: 回答B
+            dialog_A: 对话A的消息列表
+            dialog_B: 对话B的消息列表
             
         Returns:
             比较结果，包括胜者和各自的得分
         """
-        # 构建对话A
-        dialog_a = [
-            {"role": "user", "content": user_query},
-            {"role": "assistant", "content": response_a}
-        ]
+        result_A = self(dialog_A)
+        result_B = self(dialog_B)
         
-        # 构建对话B
-        dialog_b = [
-            {"role": "user", "content": user_query},
-            {"role": "assistant", "content": response_b}
-        ]
+        score_A = result_A["overall_score"]
+        score_B = result_B["overall_score"]
         
-        # 评估对话A
-        result_a = self(dialog_a)
-        
-        # 评估对话B
-        result_b = self(dialog_b)
-        
-        # 比较得分
-        score_a = result_a["overall_score"]
-        score_b = result_b["overall_score"]
-        
-        if abs(score_a - score_b) < 0.1:
+        # 确定胜者
+        if abs(score_A - score_B) < 0.1:
             winner = "Fair"
-        elif score_a > score_b:
+        elif score_A > score_B:
             winner = "A"
         else:
             winner = "B"
         
         return {
+            "A_score": score_A,
+            "B_score": score_B,
             "winner": winner,
-            "score_a": score_a,
-            "score_b": score_b,
-            "dims_a": result_a["dimensional_score"],
-            "dims_b": result_b["dimensional_score"]
+            "A_conclusion": result_A["conclusion"],
+            "B_conclusion": result_B["conclusion"]
         }
