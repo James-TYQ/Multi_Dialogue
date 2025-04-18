@@ -27,6 +27,8 @@ from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Optional, List
 import functools
+from torch.utils.checkpoint import checkpoint
+checkpoint_use_reentrant = False
 
 from BinaryLoss import BinaryLoss
 from DataLoader import load_datasets, LabelFilter
@@ -244,7 +246,7 @@ def main():
         training_args.dataloader_num_workers,
         cache_dir=args.cache_dir
     )
-        
+
     # 检查数据集是否为空
     if not train_dataset or all(len(ds) == 0 for ds in train_dataset.values()):
         raise ValueError("Training dataset is empty after processing. Check your data and filtering criteria.")

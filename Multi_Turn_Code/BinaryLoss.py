@@ -47,4 +47,7 @@ class BinaryLoss(nn.Module):
         p_sum = torch.sum(p_binary * g, dim=1, keepdim=True)
         loss_val = torch.log(a * p_sum + b * (1 - p_sum)) / 2
         
+        # 计算准确率
+        accuracy = ((valid_probs > 0.5).float() == valid_labels).float().mean() if valid_mask.sum() > 0 else torch.tensor(0.0, device=probs.device)
+        
         return -torch.mean(loss_val), loss_val  # 返回平均损失和每个样本的损失

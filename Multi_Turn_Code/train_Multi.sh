@@ -22,7 +22,7 @@ confidence=${CONFIDENCE:-0.0}
 # temperature applied to labels
 labeltemp=${LABELTEMP:-2.0}
 # 敏感度和特异度学习率
-ss_lr=${SS_LR:-5e-6}
+ss_lr=${SS_LR:-5e-3}
 # 初始敏感度和特异度值
 initial_sensitivity=${INIT_SENS:-0.8}
 initial_specificity=${INIT_SPEC:-0.6}

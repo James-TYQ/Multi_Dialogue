@@ -152,12 +152,12 @@ class TrainingArguments(BaseTrainingArguments):
         },
     )
 
-    initial_sensitivity: float = field(         # 初始敏感度
-        default=0.5,
+    initial_sensitivity: float = field(
+        default=0.8,
         metadata={"help": "Initial value for sensitivity parameter (0-1)"},
     )
-    initial_specificity: float = field(         # 初始特异度
-        default=0.5,
+    initial_specificity: float = field(
+        default=0.6,
         metadata={"help": "Initial value for specificity parameter (0-1)"},
     )
     ss_learning_rate: float = field(
